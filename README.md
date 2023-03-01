@@ -26,6 +26,10 @@ Rules:
 
 <a href="https://asciinema.org/a/HSsBCIHL0W9fDF1T8Axzyxzqi" target="_blank"><img src="https://asciinema.org/a/HSsBCIHL0W9fDF1T8Axzyxzqi.svg" /></a>
 
-3. Brain NODE game (find one common divider of 2 numbers):
+3. Brain-NODE game (find one common divider of 2 numbers):
 
 <a href="https://asciinema.org/a/iE28KXzjpZADWccbqC01r6rhN" target="_blank"><img src="https://asciinema.org/a/iE28KXzjpZADWccbqC01r6rhN.svg" /></a>
+
+4. Brain-progression game:
+
+<a href="https://asciinema.org/a/MqHdjLWh8lvf14GJ7SsAq4iEu" target="_blank"><img src="https://asciinema.org/a/MqHdjLWh8lvf14GJ7SsAq4iEu.svg" /></a>
