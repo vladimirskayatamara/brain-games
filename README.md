@@ -14,6 +14,8 @@ Run this commands in your terminal one by one.
 2. npm install
 3. make brain-even - to run brain-even game;
    make brain-calc - to run brain-calc game;
+   make brain-gcd - to run brain-calc game;
+
 
 Rules: 
 1. Brain-even game: 
@@ -23,3 +25,7 @@ Rules:
 2. Brain-calc game:
 
 <a href="https://asciinema.org/a/HSsBCIHL0W9fDF1T8Axzyxzqi" target="_blank"><img src="https://asciinema.org/a/HSsBCIHL0W9fDF1T8Axzyxzqi.svg" /></a>
+
+3. Brain NODE game (find one common divider of 2 numbers):
+
+<a href="https://asciinema.org/a/iE28KXzjpZADWccbqC01r6rhN" target="_blank"><img src="https://asciinema.org/a/iE28KXzjpZADWccbqC01r6rhN.svg" /></a>
