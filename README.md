@@ -15,6 +15,8 @@ Run this commands in your terminal one by one.
 3. make brain-even - to run brain-even game;
    make brain-calc - to run brain-calc game;
    make brain-gcd - to run brain-calc game;
+   make brain-progression - to run brain-progression game;
+   make brain-prime - to run brain-prime game;
 
 
 Rules: 
@@ -33,3 +35,7 @@ Rules:
 4. Brain-progression game:
 
 <a href="https://asciinema.org/a/MqHdjLWh8lvf14GJ7SsAq4iEu" target="_blank"><img src="https://asciinema.org/a/MqHdjLWh8lvf14GJ7SsAq4iEu.svg" /></a>
+
+5. Brain-prime game:
+
+<a href="https://asciinema.org/a/sFt6XwYLrzGiMtRu7DPBrKrxs" target="_blank"><img src="https://asciinema.org/a/sFt6XwYLrzGiMtRu7DPBrKrxs.svg" /></a>
