@@ -18,7 +18,8 @@
   "homepage": "https://github.com/vladimirskayatamara/frontend-project-44#readme",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "eslint": "^8.35.0",

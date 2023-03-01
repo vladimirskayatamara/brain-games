@@ -5,3 +5,5 @@
 Файл hexlet-check.yml отвечает за запуск этих тестов - не удаляйте этот файл, не редактируйте его и не переименовывайте репозиторий.
 
 <a href="https://codeclimate.com/github/vladimirskayatamara/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/ce823a55295468fc5a36/maintainability" /></a>
+
+<script async id="asciicast-2JdmoqkE8ynZnICCcdrtW1dId" src="https://asciinema.org/a/2JdmoqkE8ynZnICCcdrtW1dId.js"></script>
