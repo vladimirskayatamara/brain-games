@@ -1,5 +1,3 @@
-
-
 import readlineSync from 'readline-sync';
 import sayHi from './cli.js';
 import { genericRandomNumber } from './even.js';
