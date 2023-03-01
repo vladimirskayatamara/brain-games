@@ -13,8 +13,13 @@ Run this commands in your terminal one by one.
 1. git clone https://github.com/vladimirskayatamara/frontend-project-44.git
 2. npm install
 3. make brain-even - to run brain-even game;
+   make brain-calc - to run brain-calc game;
 
 Rules: 
-1. Brain even game: 
+1. Brain-even game: 
 
 <a href="https://asciinema.org/a/XOIyNuw9BRGZQVCCRJR7huYJr" target="_blank"><img src="https://asciinema.org/a/XOIyNuw9BRGZQVCCRJR7huYJr.svg" /></a>
+
+2. Brain-calc game:
+
+<a href="https://asciinema.org/a/HSsBCIHL0W9fDF1T8Axzyxzqi" target="_blank"><img src="https://asciinema.org/a/HSsBCIHL0W9fDF1T8Axzyxzqi.svg" /></a>
