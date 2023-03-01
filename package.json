@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "This is a npm game called \"Brain games\"",
+  "main": "bin/brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladimirskayatamara/frontend-project-44.git"
+  },
+  "author": "Toma Vladimirskaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladimirskayatamara/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/vladimirskayatamara/frontend-project-44#readme",
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }
+}
