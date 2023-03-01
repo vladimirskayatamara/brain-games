@@ -11,24 +11,56 @@ export default function runCalcGame() {
   do {
     const firstNumber = genericRandomNumber(100);
     const secondNumber = genericRandomNumber(100);
-    const question = readlineSync.question(`Question: ${firstNumber} ${operatorArr[count]} ${secondNumber}\nYour answer: `);
+    const question = readlineSync.question(
+      `Question: ${firstNumber} ${operatorArr[count]} ${secondNumber}\nYour answer: `
+    );
     if (!Number(question)) {
       console.log(`${question} is wrong answer ;(. Correct answer wa`);
       break;
-    } else if (firstNumber + secondNumber === +question && operatorArr[count] === '+') {
+    } else if (
+      firstNumber + secondNumber === +question &&
+      operatorArr[count] === '+'
+    ) {
       console.log('Correct!');
-    } else if (firstNumber + secondNumber !== +question && operatorArr[count] === '+') {
-      console.log(`${question} is wrong answer ;(. Correct answer was ${firstNumber + secondNumber}\nLet's try again, ${name}!`);
+    } else if (
+      firstNumber + secondNumber !== +question &&
+      operatorArr[count] === '+'
+    ) {
+      console.log(
+        `${question} is wrong answer ;(. Correct answer was ${
+          firstNumber + secondNumber
+        }\nLet's try again, ${name}!`
+      );
       break;
-    } else if (firstNumber - secondNumber === +question && operatorArr[count] === '-') {
+    } else if (
+      firstNumber - secondNumber === +question &&
+      operatorArr[count] === '-'
+    ) {
       console.log('Correct!');
-    } else if (firstNumber - secondNumber !== +question && operatorArr[count] === '-') {
-      console.log(`${question} is wrong answer ;(. Correct answer was ${firstNumber - secondNumber}\nLet's try again, ${name}!`);
+    } else if (
+      firstNumber - secondNumber !== +question &&
+      operatorArr[count] === '-'
+    ) {
+      console.log(
+        `${question} is wrong answer ;(. Correct answer was ${
+          firstNumber - secondNumber
+        }\nLet's try again, ${name}!`
+      );
       break;
-    } else if (firstNumber * secondNumber === +question && operatorArr[count] === '*') {
+    } else if (
+      firstNumber * secondNumber === +question &&
+      operatorArr[count] === '*'
+    ) {
       console.log('Correct!');
-    } else if (firstNumber * secondNumber !== +question && operatorArr[count] === '*') {
-      console.log(`${question} is wrong answer ;(. Correct answer was ${firstNumber * secondNumber}\nLet's try again, ${name}!`);
+    } else if (
+      firstNumber * secondNumber !== +question &&
+      operatorArr[count] === '*'
+    ) {
+      console.log(
+        `${question} is wrong answer ;(. Correct answer was ${
+          firstNumber * secondNumber
+        }\nLet's try again, ${name}!`
+      );
       break;
     }
     count += 1;
