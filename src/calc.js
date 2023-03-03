@@ -1,60 +1,43 @@
 import readlineSync from 'readline-sync';
-import sayHi from './cli.js';
-import { genericRandomNumber } from './even.js';
+import {
+  sayHi, genericRandomNumber, showMessageForLose, showMessageForWinner,
+  showDescription,
+} from '../index.js';
+
+function calulateCorrectAnswer(operand1, operand2, operator) {
+  switch (operator[0]) {
+    case '+':
+      return operand1 + operand2;
+    case '-':
+      return operand1 - operand2;
+    case '*':
+      return operand1 * operand2;
+    default:
+      return null;
+  }
+}
 
 export default function runCalcGame() {
   const name = sayHi();
-  console.log('What is the result of the expression?');
+  const description = 'What is the result of the expression?';
+  showDescription(description);
   let count = 0;
-  const messageForWin = `Congratulations, ${name}!`;
-  const operatorArr = ['+', '-', '*'];
+  const roundForWin = 3;
+  const operator = ['+', '-', '*'];
   do {
-    const firstNumber = genericRandomNumber(100);
-    const secondNumber = genericRandomNumber(100);
-    const question = readlineSync.question(`Question: ${firstNumber} ${operatorArr[count]} ${secondNumber}\nYour answer: `);
-    if (!Number(question)) {
-      console.log(`${question} is wrong answer ;(. Correct answer wa`);
-      break;
-    } else if (
-      firstNumber + secondNumber === +question
-      && operatorArr[count] === '+'
-    ) {
+    const operand1 = genericRandomNumber(10);
+    const operand2 = genericRandomNumber(10);
+    const answerOfUser = readlineSync.question(`Question: ${operand1} ${operator[count]} ${operand2}\nYour answer: `);
+    const trueAnswer = calulateCorrectAnswer(operand1, operand2, operator[count]);
+    if (Number(answerOfUser) === trueAnswer) {
       console.log('Correct!');
-    } else if (
-      firstNumber + secondNumber !== +question
-      && operatorArr[count] === '+'
-    ) {
-      console.log(
-        `${question} is wrong answer ;(. Correct answer was ${sfirstNumber + secondNumber}\nLet's try again, ${name}!`);
-      break;
-    } else if (
-      firstNumber - secondNumber === +question
-      && operatorArr[count] === '-'
-    ) {
-      console.log('Correct!');
-    } else if (
-      firstNumber - secondNumber !== +question
-      && operatorArr[count] === '-'
-    ) {
-      console.log(`${question} is wrong answer ;(. Correct answer was ${firstNumber - secondNumber}\nLet's try again, ${name}!`
-      );
-      break;
-    } else if (
-      firstNumber * secondNumber === +question
-      && operatorArr[count] === '*'
-    ) {
-      console.log('Correct!');
-    } else if (
-      firstNumber * secondNumber !== +question
-      && operatorArr[count] === '*'
-    ) {
-      console.log(`${question} is wrong answer ;(. Correct answer was ${firstNumber * secondNumber}\nLet's try again, ${name}!`
-      );
+    } else if (Number(answerOfUser) !== trueAnswer) {
+      showMessageForLose(answerOfUser, trueAnswer, name);
       break;
     }
     count += 1;
-  } while (count < 3);
-  if (count === 3) {
-    console.log(messageForWin);
+  } while (count < roundForWin);
+  if (count === roundForWin) {
+    showMessageForWinner(name);
   }
 }

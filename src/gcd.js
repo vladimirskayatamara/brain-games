@@ -1,40 +1,37 @@
 import readlineSync from 'readline-sync';
-import sayHi from './cli.js';
-import { genericRandomNumber } from './even.js';
+import {
+  sayHi, genericRandomNumber, showMessageForLose, showMessageForWinner, showDescription,
 
-function NOD(x, y) {
-  if (y > x) return NOD(y, x);
+} from '../index.js';
+
+function checkingNODE(x, y) {
+  if (y > x) return checkingNODE(y, x);
   if (!y) return x;
-  const result = NOD(y, x % y);
+  const result = checkingNODE(y, x % y);
   return result;
 }
 
 export default function runGCDGame() {
   const name = sayHi();
-  console.log('Find the greatest common divisor of given numbers.');
+  const description = 'Find the greatest common divisor of given numbers.';
+  const roundForWin = 3;
+  showDescription(description);
   let count = 0;
-  const messageForWin = `Congratulations, ${name}!`;
+
   do {
-    const firstNumber = genericRandomNumber(100);
-    const secondNumber = genericRandomNumber(100);
-    const nodFunction = NOD(firstNumber, secondNumber);
-    const question = readlineSync.question(
-      `Question: ${firstNumber} ${secondNumber}\nYour answer: `
-    );
-    if (!Number(question)) {
-      console.log('Допустим только числовой ввод');
-      break;
-    } else if (+question === nodFunction) {
-      console.log('Correct!');
-    } else if (+question !== nodFunction) {
-      console.log(
-        `${question} is wrong answer ;(. Correct answer was ${nodFunction}\nLet's try again, ${name}!`
-      );
+    const firstNumber = genericRandomNumber(10);
+    const secondNumber = genericRandomNumber(10);
+    const trueAnswer = checkingNODE(firstNumber, secondNumber);
+    const answerOfUser = readlineSync.question(`Question: ${firstNumber} ${secondNumber}\nYour answer: `);
+    if (Number(answerOfUser) === trueAnswer) {
+      console.log('Correct');
+    } else if (Number(answerOfUser) !== trueAnswer) {
+      showMessageForLose(answerOfUser, trueAnswer, name);
       break;
     }
     count += 1;
-  } while (count < 3);
-  if (count === 3) {
-    console.log(messageForWin);
+  } while (count < roundForWin);
+  if (count === roundForWin) {
+    showMessageForWinner(name);
   }
 }

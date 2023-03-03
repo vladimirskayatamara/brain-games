@@ -1,43 +1,40 @@
 import readlineSync from 'readline-sync';
-import sayHi from './cli.js';
-import { genericRandomNumber } from './even.js';
+import {
+  sayHi, showMessageForLose, showMessageForWinner, showDescription,
+  genericRandomNumber,
+} from '../index.js';
+
+function generateProgression(length) {
+  const arrOfNumbers = [];
+  const randomStep = genericRandomNumber(10);
+  for (let index = genericRandomNumber(100); arrOfNumbers.length < length; index += randomStep) {
+    arrOfNumbers.push(index);
+  }
+  return arrOfNumbers;
+}
 
 export default function runProgressionGame() {
   const name = sayHi();
-  console.log('What number is missing in the progression?');
+  const description = 'What number is missing in the progression?';
+  const roundForWin = 3;
   let count = 0;
-  const messageForWin = `Congratulations, ${name}!`;
-
+  showDescription(description);
   do {
-    const arrOfNumbers = [];
+    const progression = generateProgression(10);
     const randomStep = genericRandomNumber(10);
-    let trueNumber = 0;
-    for (
-      let index = genericRandomNumber(100);
-      arrOfNumbers.length < 10;
-      index += randomStep
-    ) {
-      arrOfNumbers.push(index);
-    }
-    trueNumber = arrOfNumbers[randomStep];
-    arrOfNumbers[randomStep] = '..';
-    const question = readlineSync.question(
-      `Question: ${arrOfNumbers.join(' ')}\nYour answer: `
-    );
-    if (!Number(question)) {
-      console.log('Допустим только числовой ввод');
-      break;
-    } else if (+question === trueNumber) {
+    const trueAnswer = progression[randomStep];
+    progression[randomStep] = '..';
+    const answerOfUser = readlineSync.question(`Question: ${progression.join(' ')}\nYour answer: `);
+    if (Number(answerOfUser) === trueAnswer) {
       console.log('Correct!');
-    } else if (+question !== trueNumber) {
-      console.log(
-        `${question} is wrong answer ;(. Correct answer was ${trueNumber}\nLet's try again, ${name}!`
-      );
+    } else if (Number(answerOfUser) !== trueAnswer) {
+      showMessageForLose(answerOfUser, trueAnswer, name);
       break;
     }
+
     count += 1;
-  } while (count < 3);
-  if (count === 3) {
-    console.log(messageForWin);
+  } while (count < roundForWin);
+  if (count === roundForWin) {
+    showMessageForWinner(name);
   }
 }
