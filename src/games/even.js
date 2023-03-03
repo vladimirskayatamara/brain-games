@@ -1,7 +1,7 @@
 import {
   sayHi, genericRandomNumber, showMessageForLose, showMessageForWinner,
   showDescription, askQuestion, checkingAnswer,
-} from './index.js';
+} from '../index.js';
 
 function checkingEvenNumber(randomNumber) {
   if (randomNumber % 2 === 0) {
