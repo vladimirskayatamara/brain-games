@@ -11,9 +11,7 @@ export default function runCalcGame() {
   do {
     const firstNumber = genericRandomNumber(100);
     const secondNumber = genericRandomNumber(100);
-    const question = readlineSync.question(
-      `Question: ${firstNumber} ${operatorArr[count]} ${secondNumber}\nYour answer: `
-    );
+    const question = readlineSync.question(`Question: ${firstNumber} ${operatorArr[count]} ${secondNumber}\nYour answer: `);
     if (!Number(question)) {
       console.log(`${question} is wrong answer ;(. Correct answer wa`);
       break;
@@ -27,10 +25,7 @@ export default function runCalcGame() {
       && operatorArr[count] === '+'
     ) {
       console.log(
-        `${question} is wrong answer ;(. Correct answer was ${
-          firstNumber + secondNumber
-        }\nLet's try again, ${name}!`
-      );
+        `${question} is wrong answer ;(. Correct answer was ${sfirstNumber + secondNumber}\nLet's try again, ${name}!`);
       break;
     } else if (
       firstNumber - secondNumber === +question
@@ -41,10 +36,7 @@ export default function runCalcGame() {
       firstNumber - secondNumber !== +question
       && operatorArr[count] === '-'
     ) {
-      console.log(
-        `${question} is wrong answer ;(. Correct answer was ${
-          firstNumber - secondNumber
-        }\nLet's try again, ${name}!`
+      console.log(`${question} is wrong answer ;(. Correct answer was ${firstNumber - secondNumber}\nLet's try again, ${name}!`
       );
       break;
     } else if (
@@ -56,10 +48,7 @@ export default function runCalcGame() {
       firstNumber * secondNumber !== +question
       && operatorArr[count] === '*'
     ) {
-      console.log(
-        `${question} is wrong answer ;(. Correct answer was ${
-          firstNumber * secondNumber
-        }\nLet's try again, ${name}!`
+      console.log(`${question} is wrong answer ;(. Correct answer was ${firstNumber * secondNumber}\nLet's try again, ${name}!`
       );
       break;
     }
