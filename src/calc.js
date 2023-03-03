@@ -18,13 +18,13 @@ export default function runCalcGame() {
       console.log(`${question} is wrong answer ;(. Correct answer wa`);
       break;
     } else if (
-      firstNumber + secondNumber === +question &&
-      operatorArr[count] === '+'
+      firstNumber + secondNumber === +question
+      && operatorArr[count] === '+'
     ) {
       console.log('Correct!');
     } else if (
-      firstNumber + secondNumber !== +question &&
-      operatorArr[count] === '+'
+      firstNumber + secondNumber !== +question
+      && operatorArr[count] === '+'
     ) {
       console.log(
         `${question} is wrong answer ;(. Correct answer was ${
@@ -33,13 +33,13 @@ export default function runCalcGame() {
       );
       break;
     } else if (
-      firstNumber - secondNumber === +question &&
-      operatorArr[count] === '-'
+      firstNumber - secondNumber === +question
+      && operatorArr[count] === '-'
     ) {
       console.log('Correct!');
     } else if (
-      firstNumber - secondNumber !== +question &&
-      operatorArr[count] === '-'
+      firstNumber - secondNumber !== +question
+      && operatorArr[count] === '-'
     ) {
       console.log(
         `${question} is wrong answer ;(. Correct answer was ${
@@ -48,13 +48,13 @@ export default function runCalcGame() {
       );
       break;
     } else if (
-      firstNumber * secondNumber === +question &&
-      operatorArr[count] === '*'
+      firstNumber * secondNumber === +question
+      && operatorArr[count] === '*'
     ) {
       console.log('Correct!');
     } else if (
-      firstNumber * secondNumber !== +question &&
-      operatorArr[count] === '*'
+      firstNumber * secondNumber !== +question
+      && operatorArr[count] === '*'
     ) {
       console.log(
         `${question} is wrong answer ;(. Correct answer was ${
