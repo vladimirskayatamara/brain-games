@@ -3,23 +3,23 @@
 
 <a href="https://codeclimate.com/github/vladimirskayatamara/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/ce823a55295468fc5a36/maintainability" /></a>
 
-Description:
+# Description:
 
 This project is a collection of 5 npm-based console mathematical games.
 
-Setup:
+## Setup:
 
 Run this commands in your terminal one by one.
-1. git clone https://github.com/vladimirskayatamara/frontend-project-44.git
-2. npm install
-3. make brain-even - to run brain-even game;
-   make brain-calc - to run brain-calc game;
-   make brain-gcd - to run brain-calc game;
-   make brain-progression - to run brain-progression game;
-   make brain-prime - to run brain-prime game;
+1. ```git clone https://github.com/vladimirskayatamara/brain-games.git```
+2. ```npm install```
+3. ```make brain-even``` - to run brain-even game;
+4. ```make brain-calc``` - to run brain-calc game;
+5. ```make brain-gcd``` - to run brain-calc game;
+6. ```make brain-progression``` - to run brain-progression game;
+7. ```make brain-prime``` - to run brain-prime game;
 
 
-Rules: 
+## How to play: 
 1. Brain-even game: 
 
 <a href="https://asciinema.org/a/XOIyNuw9BRGZQVCCRJR7huYJr" target="_blank"><img src="https://asciinema.org/a/XOIyNuw9BRGZQVCCRJR7huYJr.svg" /></a>
