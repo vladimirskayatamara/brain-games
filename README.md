@@ -1,5 +1,5 @@
 [![Actions Status](https://github.com/vladimirskayatamara/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/vladimirskayatamara/frontend-project-44/actions)
-<a href="https://codeclimate.com/github/vladimirskayatamara/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/ce823a55295468fc5a36/maintainability" /></a>
+<a href="https://codeclimate.com/github/vladimirskayatamara/brain-games/maintainability"><img src="https://api.codeclimate.com/v1/badges/fb117410c33c8b712c9b/maintainability" /></a>
 
 # Description:
 
