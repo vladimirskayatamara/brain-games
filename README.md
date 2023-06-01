@@ -1,6 +1,3 @@
-[![Actions Status](https://github.com/vladimirskayatamara/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/vladimirskayatamara/frontend-project-44/actions)
-<a href="https://codeclimate.com/github/vladimirskayatamara/brain-games/maintainability"><img src="https://api.codeclimate.com/v1/badges/fb117410c33c8b712c9b/maintainability" /></a>
-
 # Description:
 
 This project is a collection of 5 npm-based console mathematical games.
